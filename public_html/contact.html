@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Geelong Pet Supplies</title>
+    <meta name="author" content="Stewart Brehaut ">
+    <meta name="description" content="Geelong Pet Supplies Online Store">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">  
+
+    <script>
+          function reset(){
+            document.getElementById('phone_message').innerHTML = "";
+            document.getElementById('email_message').innerHTML = "";
+            document.getElementById('unit_message').innerHTML = "";
+            document.getElementById('name_message').innerHTML = "";
+          }
+
+        function validation() 
+        {
+          let temp;
+
+          var phone = document.getElementById("inputphone").value;
+
+          if (document.getElementById("inputname").value.length == 0) {
+            document.getElementById("name_message").innerHTML = "<em class='form-text text-danger'>Field is empty</em>";
+          }
+          else {
+           document.getElementById("name_message").innerHTML = "<em class='form-text text-success'>Valid</em>";
+          }
+
+          if(document.getElementById("inputsubject").value.length == 0)
+          {
+            document.getElementById("subject_message").innerHTML = "<em class='form-text text-danger'>You must enter a subject</em>";
+          }
+          else
+          {
+            document.getElementById("subject_message").innerHTML = "<em class='form-text text-success'>Valid</em>";
+          }
+
+          if(document.getElementById("inputEmail").value.length == 0)
+          {
+            document.getElementById("Email_message").innerHTML = "<em class='form-text text-danger'>You must enter a email</em>";
+          }
+          else if (document.getElementById("inputEmail").value.indexOf("@") < 0)
+          {
+            document.getElementById("Email_message").innerHTML = "<em class='form-text text-danger'>Input invalid, it does not contain @</em>";
+
+          }
+          else
+          {
+            document.getElementById("Email_message").innerHTML = "<em class='form-text text-success'>Valid</em>";
+          }
+
+          if (phone.length != 10) {
+            document.getElementById("phone_message").innerHTML = "<em class='form-text text-danger'>Must be 10 digits</em>";
+           } else if(isNan(phone)) {
+        temp = phone.search(/[a-z]/i);
+
+        document.getElementById("phone_message").innerHTML = "<em class='form-text text-danger'>Contains characters " +  phone.charAt(temp) + ". Only Numbers </em>";
+        }
+        else{
+            document.getElementById("phone_message").innerHTML = "<em class='form-text text-success'>Valid</em>";
+        }
+
+          if (document.getElementById("query").value.length == 0) {
+            document.getElementById("query_message").innerHTML = "<em class='form-text text-danger'>Field is empty</em>";
+          }
+          else {
+           document.getElementById("query_message").innerHTML = "<em class='form-text text-success'>Valid</em>";
+          }     
+  }
+
+  function initMap() {
+          const geelong = { lat:  -38.14565836821113, lng: 144.3630767450449 };
+          const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 4,
+            center: geelong
+          });
+          const marker = new google.maps.Marker({
+            position: geelong,
+            map: map,
+          }); 
+        }
+</script>
+<style>
+  #map {
+    width: 100%;
+    height: 400px;
+    background-color: grey;
+  }
+</style>
+  </head>
+<body>
+  <a id="top"></a>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Geelong Pet Supplies</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Navigation Bar-->
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="product_pet_food.html">Pet Food</a>
+        <a class="nav-link" href="product_pet_toy.html">Pet Toys</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="nav-link" href="login.html">Login</a>
+        <a class="nav-link" href="order.html">Order</a>
+        <a class="nav-link" href="https://www.facebook.com/">Social Media</a>
+        <a class="nav-link" href="wiki.html">Wiki</a>
+      </div>
+    </div>
+    <form>
+    <div class="form-row container">
+      <div class="col-md-10">
+      <input type="text" class="form-control" name="searchbox" id="searchbox" placeholder="Search Here!">
+      </div>
+    </form>
+    </div>
+  </nav>
+  <!-- Jumbotron Everything will be inside here except the NAV Bar, and Footer-->
+  <div class="jumbotron jumbotron-fluid">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Contact</li>
+      </ol>
+    </nav>
+    <div class="col-md-3">
+      <img src="mainlogo.png" alt="Logo" style="width: 30%;">
+  </div>
+  <!-- Bootstrap form with submit and reset button-->
+  <div class="container">
+      <h1>Contact Details</h1>
+      <p><b>Address: 20 Moolap St, Geelong, Victoria, Australia</b></p>
+      <p><b>Phone Number: 525 167 94</b></p>
+      <br>
+      <p>Our Google Maps Location</p>
+      <div id="map"></div>
+      <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDs5rxRi9r7n0wh9KCOP_04m9QNaf9k6tc&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+    
+      <h3>Please fill out to leave us a message</h3>
+  </div>
+  <form action="#"  onsubmit="validation(); return false">
+  <div class="container">
+      
+        <div class="form-group row">
+          <label for="inputname" class="col-sm-2 col-form-label font-weight-bold">Name</label>
+          <div class="col-md-6 col-5">
+            <input type="text" class="form-control" id="inputname" name="inputname" placeholder="Your Name">
+          </div>
+          <div id="name_message"></div>
+        </div>
+        <div class="form-group row">
+          <label for="inputsubject" class="col-sm-2 col-form-label font-weight-bold">Subject</label>
+          <div class="col-md-6 col-5">
+            <input type="text" class="form-control" id="inputsubject" name="inputsubject" placeholder="What is your query about?"> 
+            </div>
+            <div id="subject_message"></div>
+        </div>
+        <div class="form-group row">
+            <label for="inputEmail" class="col-sm-2 col-form-label font-weight-bold">Email</label>
+            <div class="col-md-6 col-5">
+              <input type="text" class="form-control" id="inputEmail" name="inputEmail" placeholder="Please enter your email">
+            </div>
+            <div id="Email_message"></div>
+        </div>
+        <div class="form-group row">
+          <label for="inputphone" class="col-sm-2 col-form-label font-weight-bold">Phone Number</label>
+          <div class="col-md-6 col-5">
+            <input type="text" class="form-control" id="inputphone" name="inputphone" placeholder="Please enter your phone number">
+          </div>
+          <div id="phone_message"></div>
+      </div>
+        <div class="form-group">
+            <label for="query"><b>Query</b></label>
+              <textarea class="form-control" id="query" name="query" rows="3" placeholder="Please enter your message here"></textarea>
+        </div>
+        <div id="query_message"></div>
+    </div>
+    <br>
+    <div class="col-md-9 offset-md-3 col-9 offset-3">
+      <input type="submit" class="btn btn-primary" value="Submit"> &nbsp; <input type="reset" value="Reset" class="btn btn-primary">
+   
+    </div>
+  </form>
+</div>      
+<footer>
+     <p class="text-center">Geelong Pet Supplies &copy; 2021</p>
+</footer>
+   <!-- jQuery library --> 
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+</body>
+</html>

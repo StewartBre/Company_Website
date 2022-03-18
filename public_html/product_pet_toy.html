@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Geelong Pet Supplies</title>
+    <meta name="author" content="Stewart Brehaut ">
+    <meta name="description" content="Geelong Pet Supplies Online Store">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">  
+    <script>
+      var txt
+
+      const badFeedback = [];
+      const goodFeedback = [];
+
+      function cardUpdate(value, index, array){
+      
+          txt += "<tr><td>" + value.name + "</td>" + "<td>"  + value.feedback + "</td>" + "<td>" + value.rating + "</td>" + "<td>" + value.product + "</td></tr>";
+          }
+
+      function reset_form() {
+          document.getElementById("name").value = "";
+          document.getElementById("feedback").value = "";
+          document.getElementById("rating").value = "";
+          document.getElementById("product").value = "";
+      }
+
+      function addFeedback(){
+  
+          var nametmp, feedbacktmp, ratingtmp, producttmp, celltmp
+
+          nametmp = document.getElementById("name").value;
+          feedbacktmp = document.getElementById("feedback").value;
+          ratingtmp = document.getElementById("rating").value;
+          producttmp = document.getElementById("product").value;
+
+          celltmp = {
+              "name": nametmp,
+              "feedback": feedbacktmp,
+              "rating": ratingtmp,
+              "product": producttmp,
+          }
+
+      if ((ratingtmp =="Excellent") | (ratingtmp == "Good")){
+      
+          goodFeedback.unshift(celltmp);
+          document.getElementById("positive").innerHTML = "";
+          txt = "<table id='table_feedback'>";
+          txt += '<thead> <th id="first_row"> Name </th><th id="second_row"> Feedback  </th><th id="third_row"> Rating  </th><th id="fourth_row"> Product </th></thead>';
+          goodFeedback.forEach(cardUpdate);
+          txt += "</table>";
+          document.getElementById("positive").innerHTML = txt;
+          }
+
+      else if ((ratingtmp =="Poor") | (ratingtmp == "Disappointing")) {
+      
+          badFeedback.unshift(celltmp);
+          document.getElementById("negative").innerHTML = "";
+          txt = "<table id='table_feedback'>";
+          txt += '<thead> <th id="first_row"> Name </th><th id="second_row"> Feedback </th><th id="third_row"> Rating </th><th id="fourth_row"> Product </th></thead>';
+          badFeedback.forEach(cardUpdate);
+          txt += "</table>";
+          document.getElementById("negative").innerHTML = txt;
+      }   
+      
+      reset_form();
+
+      }        
+  </script>
+  <style>
+    #table_feedback{
+        table-layout: fixed;
+        width: 100%;
+        font-size: small;
+    }
+
+    #table_feedback th, td{
+        padding:5px;
+
+    }
+
+    #first_row{
+        width: 20%;
+
+    }
+
+    #second_row{
+        width: 40%;
+        
+    }
+
+    #third_row{
+        width: 20%;
+        
+    }
+
+    #fourth_row{
+        width: 20%;
+        
+    }
+    </style>
+  </head>
+<body>
+  <a id="top"></a>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Geelong Pet Supplies</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Navigation Bar-->
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="product_pet_food.html">Pet Food</a>
+        <a class="nav-link" href="product_pet_toy.html">Pet Toys</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="nav-link" href="login.html">Login</a>
+        <a class="nav-link" href="order.html">Order</a>
+        <a class="nav-link" href="https://www.facebook.com/">Social Media</a>
+        <a class="nav-link" href="wiki.html">Wiki</a>
+      </div>
+    </div>
+    <form>
+    <div class="form-row container">
+      <div class="col-md-10">
+      <input type="text" class="form-control" name="searchbox" id="searchbox" placeholder="Search Here!">
+      </div>
+    </form>
+    </div>
+  </nav>
+  <!-- Jumbotron Everything will be inside here except the NAV Bar, and Footer-->
+  <div class="jumbotron jumbotron-fluid">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Pet Toys</li>
+        </ol>
+      </nav>
+    <div class="col-md-3">
+      <img src="mainlogo.png" alt="Logo" style="width: 30%;">
+  </div>
+  <div class="container">
+      <h1>Pet Toy Products</h1>
+      <p>Please view our pet toy products. Use the navigation bar at the top of the page to view our pet food products. Or use the search bar
+          in the top right corner.
+      </p>
+   </div>
+     <div class="container">
+        <div class=card-deck>
+            <div class="card">
+                <img src="pettoy1.jpg" class="card-img-top" alt="Pet toy product 1">
+            <div class="card-body">
+               <p class="card-text"></p>
+            </div>
+            <ul class="list-group list-group-flush">
+            <li class="list-group-item">Pet Toy Frisbee </li>
+            <li class="list-group-item">Multiple Sizes</li>
+            <li class="list-group-item">Price: $20</li>
+            </ul>
+          </div>
+            <div class="card">
+                <img src="pettoy2.jpg" class="card-img-top" alt="Pet toy product 2">
+            <div class="card-body">
+                <p class="card-text"></p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Squeaky Bone</li>
+                <li class="list-group-item">Blue</li>
+                <li class="list-group-item">Price: $10</li>
+                </ul>
+          </div>
+            <div class="card">
+                <img src="pettoy3.jpg" class="card-img-top" alt="Pet toy 3">
+                <div class="card-body">
+                   <p class="card-text"></p>
+                </div>
+                <ul class="list-group list-group-flush">
+                <li class="list-group-item">Cat Ball Bell Toy</li>
+                <li class="list-group-item">Multiple Colors</li>
+                <li class="list-group-item">Price: $15</li>
+                </ul>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="container">
+        <h2> Product Feedback Form</h2>
+        <p>Please provide feedback on your experiences with our <i>Geelong Pet Supplies</i> toy products.<br>
+            Include your name, comment, product you purchased, and rating.</p>
+            <div class="card">
+                <div class="card-header">How was your experience with our <i>Geelong Pet Supplies</i> toy products?</div>
+                <div class="card-body">
+                    <form onsubmit="addFeedback(); return false;">
+                        <div class="form-group"> 
+                            <label class = "col-form-label" for="name">Name:</label>
+                        <input type = "text" class ="form-control" id="name" placeholder="Please enter your name" name = "name" required> 
+                        </div>
+                        <div class="form-group">
+                        <label class = "col-form-label" for="feedback">Your Comments:</label>
+                        <textarea class="form-control" id="feedback" placeholder="Enter your feedback here." name="feedback" rows="2" maxlength="200"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class = "col-form-label" for="rating">Rating:</label>
+                            <div class="row mx-auto">
+                            <select class="form-control col-sm-10" name="rating" id="rating" required>
+                                <option value="none" selected disabled>Select Rating</option>
+                                <option value="Excellent">Excellent</option>
+                                <option value="Good">Good</option>
+                                <option value="Poor">Poor</option>
+                                <option value="Disappointing">Disappointing</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <label class = "col-form-label" for="product">Product:</label>
+                            <div class="row mx-auto">
+                            <select class="form-control col-sm-10" name="product" id="product" required>
+                                <option value="none" selected disabled>Select Product</option>
+                                <option value="Adult Dog Food">Adult Dog Food</option>
+                                <option value="Cat Food">Cat Food</option>
+                                <option value="Small Dog Food">Small Dog Food</option>
+                            </select>
+                     <br>
+                     <br>
+                    <button class ="btn btn-primary col-sm-2" type = "submit"> Add Feedback </button>
+                </div>
+            </div>
+                 </form>
+                </div>
+            </div>
+        <div class="row pt-sm-1">
+            <div class="col-sm-12 col-lg-6">
+                <div class="card">
+                    <div class ="card-header">Customers with <i>positive</i> feedback</div>
+                    <div class="card-body">
+                        <p id="positive"></p>
+                        </div>
+                   </div>
+               </div>
+                <div class="col-sm-12 col-lg-6">
+                    <div class="card">
+                        <div class ="card-header">Customers with <i>negative</i> feedback</div>
+                        <div class="card-body">
+                            <p id="negative"></p>
+                        </div>
+                </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    </div>
+   <footer>
+     <p class="text-center">Geelong Pet Supplies &copy; 2021</p>
+   </footer>
+      <!-- jQuery library --> 
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Geelong Pet Supplies</title>
+    <meta name="author" content="Stewart Brehaut ">
+    <meta name="description" content="Geelong Pet Supplies Online Store">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">  
+</head>
+<body>
+  <a id="top"></a>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Geelong Pet Supplies</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Navigation Bar-->
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="product_pet_food.html">Pet Food</a>
+        <a class="nav-link" href="product_pet_toy.html">Pet Toys</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="nav-link" href="login.html">Login</a>
+        <a class="nav-link" href="order.html">Order</a>
+        <a class="nav-link" href="https://www.facebook.com/">Social Media</a>
+        <a class="nav-link" href="wiki.html">Wiki</a>
+      </div>
+    </div>
+    <form>
+    <div class="form-row container">
+      <div class="col-md-10">
+      <input type="text" class="form-control" name="searchbox" id="searchbox" placeholder="Search Here!">
+      </div>
+    </form>
+    </div>
+  </nav>
+  <!-- Jumbotron Everything will be inside here except the NAV Bar, and Footer-->
+  <div class="jumbotron jumbotron-fluid">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Wiki</li>
+      </ol>
+    </nav>
+    <div class="col-md-3">
+      <img src="mainlogo.png" alt="Logo" style="width: 30%;">
+  </div>
+  <div class="container">
+      <h1>Wiki</h1>
+      <p>This is my website. I have implemented many new features. For my website I focused on Bootstrap Components, Express NodeJS, JavaScript, and Dynamic Content. These are explained below</p>
+      <br>
+      <h3>Bootstrap Components</h3>
+      <ul>
+        <li>Jumbotron</li>
+        <li>Carousel</li>
+        <li>Cards</li>
+        <li>Callout Info</li>
+        <li>NavBar with Search Bar</li>
+        <li>Breadcrumb</li>
+        <li>Various Forms</li>
+      </ul>
+      <p>The site may contain more Bootstrap component then I have listed here. All of the content in the webpage is inside a Jumbotron except for the NavBar and footer. This keeps a consistent layout and style. 
+          There is an image carousel on the home page, which makes the home page stand out. You can press the arrows to change the image or wait for it to change. I use cards to display all of the Pet products on the pet toys and pet food page.
+          I also use cards for the customer feedback tables on both of those pages. This is a way of making the products and the customer feedback table look pleasant.
+          <br>
+          <br>
+          On the home page I have a callout info box we asks people if they have signed up to the website. This is a way to draw attention to the viewer, it uses CSS to look more appealing. The Navigation uses Bootstrap's NavBar it includes a search bar.
+          I use breadcrumb which is the first code inside the jumbotron just above the logo. Breadcrumb indicates where the current page's location is in a website. It shows a nvaigational heirachy. It needs to be structured to avoid confusion.
+          Breadcrumb is implemented using a list with a breadcrumb class. The item higher up the list is higher in the heirachy. The number of forms throughtout this webpage all us Bootstrap to implement them. This helps make the forms look professional and makes sure they work correctly.  
+      </p>
+      <br>
+      <h3>JavaScript & Dynamic Content</h3>
+      <ul>
+        <li>Form Validations</li>
+        <li>Dynamic Greeting</li>
+        <li>Mouse Hover</li>
+        <li>Add Feedback</li>
+        <li>External Google Maps</li>
+        <li>Date Time Functions</li>
+        <li>Other functions</li>
+      </ul>
+      <p>The login page, signup page, and contact page all have JS form validation features. The features they have are like what we did in previous practicals, however I have added some new features. On the signup page there is a password field and confirm password field. These two fields must match for the confirm password field to to be valid.
+          I created this by using if (inputpassword) == (input_repeatpassword) green matches! else doesnt match. I think this is a feature that makes it easier to create a password properly.
+      </p>
+      <br>
+      <p>I added a dynamic greeting like what we did in the practical, when someone clicks the button "Display Greeting" on the home page it will display a message. When you hover over the message with your mouse, the background will become orange. When you move the mouse off the message it will return to normal. I made this using the mouseHilight and mouseNot functions.
+          The dynamic greeting involved the use of making greetings times, getting dates, and using switch values. </p>
+          <br>
+          <p>The feedback tables on the pet food and pet toys pages both use JS to update the card and add feedback. It's like what we did in the workshops but I have added another feature where you must select a product along with a rating. When a user adds feedback it will display their name, feedback, rating, and comment. As well as placing their input into the positive experiecnce table or negative experience table.</p>
+          <br>
+          <p>I added an externally hosted Google Maps on my contact web page. This is made with JS and is a dynamic external component to my webpage. I used a function initMap. Then I found the latitude and longtitude for Geelong so a marker is placed on the map. I made an API key on the google website and used that for this. It is also styled with CSS. The map doesn't work fully properly because I think you may have to pay or something. </p>
+          <br>
+          <p>For my order POST page I created a function that will get a date then plus 7 days for the devlivery time. I called the function addDays. So I can now get the orderDate and add 7 days. This is a good example of a JS Date function. I probably have other functions throughout the website. I hope I haven't forgot!</p>
+   
+   <h3>Express NodeJS</h3>
+   <p>On the order form page when you submit an order Express will POST a new webpage to the browser. This page is like what we did in the previous pratical except as I previously explained I added a new date function. The POST page will show the order date plus 7 days as the expected delivery. Also, if the state entered is "VIC" the postage is $5. If any other state the postage is $10 dollars. I think this example of using Express and NodeJS demonstrates why a professional website needs these features. The POST website displays the customers contact details and order information. If the user submitted the discount code "ILOVEPETS" they will receive a discount. The discount code was displayed in the display greeting message on the home page.</p>
+   <br>
+   <h1>How to & Research Sources</h1>
+   <p>Many new features that were not covered in the unit learning material has been implemented in this website. Below I explain how you can implement them and also how I researched them.</p>
+
+   <h4>Callout Info</h4>
+   <p>I researched how to implement a callout info alert at <a href="https://codepen.io/superjaberwocky/pen/rLKxOa">Code Pen</a> and <a href="https://www.w3schools.com/howto/howto_js_callout.asp">W3Schools</a> I used the examples and changed them for my own website. You can easily implement your own callout alert using this code</p> 
+   <pre>
+     <code>
+       div class="bd-callout bd-callout-info" /div
+      </code>
+    </pre>
+   <p>You can insert your own code inbetween the div to create your message</p>
+   <h4>Breadcrumb</h4>
+   <p> When researching how to imeplement Breadcrumb I mostly used this source <a href="https://getbootstrap.com/docs/5.0/components/breadcrumb/>">Get Bootstrap Documents</a>. I found this feature was easy to implement. To implement this feature you can use the code example I have provided below. Add your own links to fit your website and place it in the same page on each webpage to keep consistency.</p>
+   <pre>
+    <code>
+      nav aria-label="breadcrumb"
+        ol class="breadcrumb"
+          li class="breadcrumb-item"> a href =    /a  /li
+          li class="breadcrumb-item active" aria-current="page">Library  /li
+        /ol
+      /nav
+     </code>
+   </pre>
+   <h4>Form Validation Features</h4>
+   <p>The form validation features are based on the same work we did during the unit. However, I have added an additional feature a password and confirm password validation. I researched this technique on various forums including <a href="https://stackoverflow.com/questions/21727317/how-to-check-confirm-password-field-in-form-without-reloading-page/21727610">here</a> and <a href="https://www.aspsnippets.com/Articles/Password-and-Confirm-Password-validation-using-JavaScript-and-jQuery.aspx">here.</a></p>
+   <p>To implement this feature you must place the code in the script part of your html file and use the code included below</p>
+   <pre>
+     <code>
+      if (document.getElementById('inputpassword').value ==
+      document.getElementById('input_repeatpassword').value) 
+     {
+      document.getElementById('password_repeatmessage').style.color = 'green';
+      document.getElementById('password_repeatmessage').innerHTML = 'Matches';
+   } else {
+           document.getElementById('password_repeatmessage').style.color = 'red';
+           document.getElementById('password_repeatmessage').innerHTML = 'Not Matching';
+   }
+
+     </code>
+   </pre>
+   <p>If the password does not match it will be red, if it matches it is green. You can change the color and the message that appears by changing the code above.</p>
+   <h4>Feedback Table</h4>
+   <P>The feedback table I implemented is simillar to what we did in the practicals. However, I added the ability to select which product you bought which is then added to the table. I researched this just by using the course material and my own understanding. It seemed a simple and neat addition to implement. It just required creating a new input option and then adding a new document element to the JavaScript code. If you want to implement this feature check out the code below</P>
+
+   <pre>
+    <code>
+      var txt
+
+      const badFeedback = [];
+      const goodFeedback = [];
+
+      function cardUpdate(value, index, array){
+      
+          txt += "tr>td>" + value.name + "/td>" + "td>"  + value.feedback + "/td>" + "td>" + value.rating + "/td>" + "td>" + value.product + "/td>/tr>";
+          }
+
+      function reset_form() {
+          document.getElementById("name").value = "";
+          document.getElementById("feedback").value = "";
+          document.getElementById("rating").value = "";
+          document.getElementById("product").value = "";
+      }
+
+      function addFeedback(){
+  
+          var nametmp, feedbacktmp, ratingtmp, producttmp, celltmp
+
+          nametmp = document.getElementById("name").value;
+          feedbacktmp = document.getElementById("feedback").value;
+          ratingtmp = document.getElementById("rating").value;
+          producttmp = document.getElementById("product").value;
+
+          celltmp = {
+              "name": nametmp,
+              "feedback": feedbacktmp,
+              "rating": ratingtmp,
+              "product": producttmp,
+          }
+
+      if ((ratingtmp =="Excellent") | (ratingtmp == "Good")){
+      
+          goodFeedback.unshift(celltmp);
+          document.getElementById("positive").innerHTML = "";
+          txt = "table id='table_feedback'>";
+          txt += 'thead> th id="first_row"> Name /th>th id="second_row"> Feedback  /th>th id="third_row"> Rating  /th>th id="fourth_row"> Product /th>/thead>';
+          goodFeedback.forEach(cardUpdate);
+          txt += "/table>";
+          document.getElementById("positive").innerHTML = txt;
+          }
+
+      else if ((ratingtmp =="Poor") | (ratingtmp == "Disappointing")) {
+      
+          badFeedback.unshift(celltmp);
+          document.getElementById("negative").innerHTML = "";
+          txt = "table id='table_feedback'>";
+          txt += 'thead> th id="first_row"> Name /th>th id="second_row"> Feedback /th>th id="third_row"> Rating /th>th id="fourth_row"> Product /th>/thead>';
+          badFeedback.forEach(cardUpdate);
+          txt += "/table>";
+          document.getElementById("negative").innerHTML = txt;
+      }   
+      
+      reset_form();
+
+      }        
+
+    </code>
+  </pre>
+  <p>In the code above you can see I have added the doucment element "product" you must then create a variable producttmp. Then in the if and else if sections you must make sure a Product column is added to the table when it's created.</p>
+  <h4>External Google Maps</h4>
+  <p>This was a really interesting feature to implement, I read a few guides online to figure how how to do this. There is also official documentation on the google website. The main source I used is <a href="https://www.geeksforgeeks.org/how-to-add-google-maps-to-a-website/">here</a>.</p>
+  <p>The first thing you need to do is insert this into your html file the code is below</p>
+  <pre>
+    <code>
+      script src=
+      “https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly”
+      async>
+      /script
+    </code>
+  </pre>
+  <p>You then need to use Google and generate an API key and place it in the code above where it says "YOUR_API_KEY". You can do this at <a href="https://console.cloud.google.com/">Google Cloud Console</a></p>
+  <p>You must then place the map inside your page you can use the code below and change the ID if you need</p>
+  <pre>
+    <code>
+      div id="map"/div
+    </code>
+  </pre>
+  <p>You must then add in some JS code that is found below, you can change it to suit your own website</p>
+  <pre>
+    <code>
+      // Initialize and add the map
+      function initMap() {
+
+          // The location of Uluru
+          const Uluru = {
+              lat: 28.50231,
+              lng: 77.40548
+          };
+
+          // Create the map, centered at Uluru
+          const map = new google.maps.Map(
+                  document.getElementById("map"), {
+
+              // Set the zoom of the map
+              zoom: 17.56,
+              center: Uluru,
+          });
+      }
+    </code>
+  </pre>
+
+
+  <h4>Express NodeJS (New Date and If Function)</h4>
+  <p>My express NodeJS repose form was made like what we did in the practical however I added two new functions. One is a new date function and one is an IF function. I researched the date function on various forums including stackoverflow.</p>
+  <p>First I made a new function called addDays you can see the code below</p>
+  <pre>
+    <code>
+      function addDays(date, days) {
+        var result = new Date(date);
+        result.setDate(result.getDate() + days);
+        return result;
+        }
+    </code>
+  </pre>
+  <p>This code helps make the delivery time variable</p>
+  <pre>
+    <code>
+      let orderdate = new Date();
+      deliverytime = addDays(orderdate, 7);
+
+      deliverytime.toLocaleDateString()
+    </code>
+  </pre>
+  <p>You can then set the delivery time to be however many days more than the orderdate in this case it is 7. This function is very nice for an Express Order Form like what we have done for this website. You can then display the expected deliverytime when someone orders a product using "toLocaleDateString()" </p>
+  <p> I also created a new IF function. The IF function was easy to implement and I didn't really need to research this technique the course material and my own intution was enough to create this function. This function was used to apply a different postage fee depending on what state you order from. You can see the code below</p>
+  <pre>
+    <code>
+      function costState(state) {
+        if (state == "VIC") {
+            return 5.00;
+        } else {
+            return 10.00; }       
+    };
+    </code>
+  </pre>
+  <p>For my website the store is located in VIC so obviously the postage would be cheaper there. For every other state it is 10 dollars. You could add more else if statements to have different postage fees for all of the different states.</p>
+
+
+  <p>Above I have shown new features that have been implemented in this site that weren't covered in the unit material. Hopefully you will be able to implement them in your own website</p>
+
+
+
+
+
+
+
+</div>
+
+
+
+</div>
+            
+<footer>
+     <p class="text-center">Geelong Pet Supplies &copy; 2021</p>
+</footer>
+   <!-- jQuery library --> 
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+</body>
+
+</html>

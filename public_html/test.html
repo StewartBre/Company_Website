@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Form Validation</title>
+        
+        <script>
+            function validation(){
+                if (document.getElementById("fname").value.length == 0){
+                    document.getElementById("message").innerHTML = "<em> You did not enter your first name </em>";
+                    return false;
+                } else
+                    return true;
+            }            
+        </script>
+    </head>
+    <body>
+        <h2>Here is an example of form validation.</h2>
+        
+        <form method="POST" action="#" onsubmit="validation(); return false;">
+            <label for="fname"> Please enter your first name: </label>
+            <input type="text" id="fname" name="fname"> </inpt> <span id="message"></span>
+            <br> <br>
+            <input type="submit">
+        </form>      
+    </body>
+</html>
